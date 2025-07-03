@@ -8,6 +8,7 @@ async function bootstrap() {
     methods: ['GET', 'POST'],
     credentials: true,
   });
+  
   await app.listen(process.env.PORT ?? 3005);
 }
 bootstrap();

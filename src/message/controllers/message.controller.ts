@@ -8,6 +8,7 @@ export class MessageController {
   @Get(':id/messages')
   async getUserMessages(@Param('id') id: string) {
     try {
+      console.log("request is recived");
       const messages = await this.messageService.getMessages(id);
       console.log(messages);
       return { success: true, data: messages };
